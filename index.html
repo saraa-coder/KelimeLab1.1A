@@ -26,7 +26,7 @@
             }
 
             .main-title span {
-                /* MANTENIDO: Degradado solicitado (pastel a rojo intenso) */
+                /* DEGRADADO NOTABLE: Rosa pastel a Rojo intenso */
                 background: linear-gradient(180deg, #ffcdd2 5%, #b71c1c 85%) !important;
                 -webkit-background-clip: text !important;
                 background-clip: text !important;
@@ -42,17 +42,20 @@
                 margin-right: -0.15em !important; 
             }
 
-            /* Círculo centrado debajo en móvil */
+            /* Círculo centrado debajo */
             #start-screen div[style*="display: flex"] {
                 flex-direction: column !important;
                 align-items: center !important; 
             }
 
-            /* CORREGIDO: Se eliminan los forzados de tamaño. Ahora usa el original inline */
             #start-screen div[style*="background: linear-gradient"] {
-                /* Se han borrado width, height y font-size */
+                /* Círculo un punto más claro en móvil */
+                background: linear-gradient(180deg, #ff4d4d 0%, #b30000 100%) !important;
+                width: 55px !important;
+                height: 55px !important;
+                font-size: 1.4rem !important;
                 margin-left: 0 !important; 
-                margin-top: 10px !important; 
+                margin-top: 5px !important; 
                 font-weight: 900 !important;
             }
 
@@ -72,7 +75,8 @@
             </h1>
 
             <div style="
-                background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
+                /* Círculo un punto más claro en PC (#ff4d4d -> #b30000) */
+                background: linear-gradient(180deg, #ff4d4d 0%, #b30000 100%);
                 color: white;
                 font-family: inherit;
                 font-size: 2rem;
@@ -83,7 +87,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+                box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
                 flex-shrink: 0;
                 margin-left: 25px;
                 line-height: 1;
