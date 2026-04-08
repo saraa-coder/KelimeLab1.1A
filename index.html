@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelime Lab - Aprende Turco</title>
     <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Ajustes específicos para móviles */
+        @media screen and (max-width: 768px) {
+            /* Engrosamos el texto general y botones */
+            body, button, .primary-btn, #word, .stats {
+                font-weight: 700 !important;
+            }
+
+            /* El título principal "Kelime Lab" con un poco más de peso */
+            .main-title span {
+                font-weight: 900 !important;
+                -webkit-text-stroke: 0.5px rgba(0,0,0,0.1); /* Sutil contorno para resaltar */
+            }
+
+            /* Las opciones de respuesta en el grid suelen verse delgadas, aquí las reforzamos */
+            .options-grid button {
+                font-weight: 800 !important;
+                font-size: 1.1rem; /* Un pelín más grandes para legibilidad */
+            }
+
+            /* Los números de la versión (1.1A) ya son gruesos, pero aseguramos claridad */
+            #start-screen div[style*="background: linear-gradient"] {
+                font-weight: 900 !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -19,7 +46,7 @@
                 background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
                 color: white;
                 font-family: inherit;
-                font-size: 2rem; /* Tamaño masivo para que se vea claro */
+                font-size: 2rem;
                 font-weight: 900;
                 border-radius: 50%;
                 width: 75px;
@@ -29,7 +56,7 @@
                 justify-content: center;
                 box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
                 flex-shrink: 0;
-                margin-left: 25px; /* Espacio extra de seguridad para no tocar la 'b' */
+                margin-left: 25px;
                 line-height: 1;
             ">
                 1.1A
