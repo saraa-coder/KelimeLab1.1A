@@ -13,20 +13,21 @@
                 font-weight: 700 !important;
             }
 
-            /* --- CAMBIO: KELIME LAB MÁS GRUESO --- */
+            /* --- KELIME LAB: MÁS GRANDE Y MÁS GRUESO --- */
             .main-title span {
+                font-size: 3.5rem !important; /* Aumentamos el tamaño físico */
                 font-weight: 900 !important;
-                /* El shadow añade grosor extra visual en móviles */
-                text-shadow: 0.5px 0px 0px currentColor, -0.5px 0px 0px currentColor;
-                letter-spacing: -0.5px; /* Ajuste para que el grosor no pegue las letras */
+                /* El stroke ensancha la letra manteniendo el degradado intacto */
+                -webkit-text-stroke: 1.5px #ff4b2b; 
+                display: inline-block;
             }
 
-            /* Círculo 1.1A ajustado */
+            /* Círculo 1.1A ajustado para no chocar con las letras grandes */
             #start-screen div[style*="background: linear-gradient"] {
                 width: 55px !important;
                 height: 55px !important;
                 font-size: 1.4rem !important;
-                margin-left: 15px !important;
+                margin-left: 10px !important;
                 font-weight: 900 !important;
             }
 
