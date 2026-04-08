@@ -29,7 +29,6 @@ body {
 
 .main-title {
     white-space: nowrap; 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: clamp(2.2rem, 10vw, 4rem);
     font-weight: 800;
     color: var(--primary);
@@ -42,34 +41,32 @@ body {
     color: var(--pantone-blue);
 }
 
-/* EL ARREGLO DEFINITIVO PARA EL CÍRCULO */
+/* --- ESTA ES LA REGLA QUE FUERZA EL CAMBIO DEL CÍRCULO --- */
+div[style*="background-color: #ff5252"], 
 div[style*="border-radius: 50%"] { 
-    /* Forzamos que baje a la siguiente línea */
+    /* Cancelamos el posicionamiento absoluto que lo pega al título */
     position: relative !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    left: auto !important;
     top: auto !important;
+    left: auto !important;
+    right: auto !important;
     transform: none !important;
-
-    /* Tamaño del círculo (equilibrado) */
+    display: flex !important;
+    
+    /* Tamaño del círculo intermedio */
     width: 60px !important; 
     height: 60px !important;
     min-width: 60px !important;
     min-height: 60px !important;
-    
-    /* El texto de la versión (1.A1) */
-    font-size: 1.2rem !important; 
+
+    /* Tamaño de los números (1.A1) */
+    font-size: 1.2rem !important;
     font-weight: 800 !important;
-    color: white !important;
     
-    /* SEPARACIÓN CRUCIAL */
-    margin-top: 30px !important; 
-    margin-bottom: 30px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    /* SEPARACIÓN: 30px arriba y abajo */
+    margin: 30px auto !important; 
     
+    align-items: center !important;
+    justify-content: center !important;
     flex-shrink: 0 !important;
 }
 
@@ -143,7 +140,6 @@ div[style*="border-radius: 50%"] {
     transform: none !important;
 }
 
-/* PUNTOS */
 #dots {
     display: flex !important;
     flex-direction: row !important;
@@ -164,7 +160,6 @@ div[style*="border-radius: 50%"] {
     background-color: var(--accent); 
 }
 
-/* OPCIONES */
 .options-grid {
     display: grid;
     gap: 12px;
