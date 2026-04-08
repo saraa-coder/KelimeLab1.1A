@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Ajuste específico para PC: Grosor casi 700 pero con un toque menos de peso */
+        /* Ajuste específico para PC: Casi 700 pero con un toque menos de peso */
         .main-title span {
             font-weight: 695 !important; 
         }
@@ -27,14 +27,17 @@
             }
 
             .main-title span {
-                /* GROSOR AUMENTADO EN MÓVIL */
                 font-weight: 900 !important; 
                 font-size: 14vw !important; 
-                letter-spacing: -0.04em !important; /* Un pelín más juntas para compensar el grosor */
+                letter-spacing: -0.04em !important; 
                 display: inline-block !important;
                 line-height: 1.1 !important;
                 white-space: nowrap !important;
-                -webkit-text-stroke: 1px transparent; /* Truco para suavizar bordes en grosores altos */
+                -webkit-text-stroke: 1px transparent;
+
+                /* SOLUCIÓN PARA QUE NO SE CORTE LA 'B' */
+                padding-right: 0.15em !important; /* Da un aire extra a la derecha */
+                margin-right: -0.15em !important; /* Compensa el padding para no mover el centrado */
             }
 
             /* Centrado del círculo y reducción de espacio */
