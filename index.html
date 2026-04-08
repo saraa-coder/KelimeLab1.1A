@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelime Lab - Aprende Turco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div id="start-screen" class="screen-content">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            
+            <h1 class="main-title" style="display: inline-block; margin: 0; line-height: 1;">
+                <span style="background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Kelime Lab</span>
+            </h1>
+
+            <div style="
+                background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
+                color: white;
+                font-family: inherit;
+                font-size: 2rem; /* Tamaño masivo para que se vea claro */
+                font-weight: 900;
+                border-radius: 50%;
+                width: 75px;
+                height: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+                flex-shrink: 0;
+                margin-left: 25px; /* Espacio extra de seguridad para no tocar la 'b' */
+                line-height: 1;
+            ">
+                1.1A
+            </div>
+        </div>
+        
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+            BAŞLA
+        </button>
+        
+        <button id="resume-button" onclick="startGame()" class="primary-btn" style="margin-top: 20px; display: none; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+            DEVAM ET
+        </button>
+    </div>
+
+    <div id="game-container">
+        <div class="topbar">
+            <div class="stats">
+                <span id="score">0 tamamlanan</span>
+                <span id="percent">%0</span>
+            </div>
+            <button class="stats" onclick="location.reload()">Menü</button>
+        </div>
+        <div class="card">
+            <h1 id="word">Cargando...</h1>
+            <div id="dots"></div>
+        </div>
+        <div id="options" class="options-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
