@@ -9,38 +9,22 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <div class="header-container">
             
-            <h1 class="main-title" style="display: inline-block; margin: 0; line-height: 1;">
-                <span style="background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Kelime Lab</span>
+            <h1 class="main-title">
+                Kelime Lab
             </h1>
 
-            <div style="
-                background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
-                color: white;
-                font-family: inherit;
-                font-size: 2rem; /* Tamaño masivo para que se vea claro */
-                font-weight: 900;
-                border-radius: 50%;
-                width: 75px;
-                height: 75px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
-                flex-shrink: 0;
-                margin-left: 25px; /* Espacio extra de seguridad para no tocar la 'b' */
-                line-height: 1;
-            ">
+            <div class="version-badge">
                 1.1A
             </div>
         </div>
         
-        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn btn-blue">
             BAŞLA
         </button>
         
-        <button id="resume-button" onclick="startGame()" class="primary-btn" style="margin-top: 20px; display: none; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+        <button id="resume-button" onclick="startGame()" class="primary-btn btn-blue" style="display: none;">
             DEVAM ET
         </button>
     </div>
@@ -53,10 +37,12 @@
             </div>
             <button class="stats" onclick="location.reload()">Menü</button>
         </div>
+        
         <div class="card">
             <h1 id="word">Cargando...</h1>
             <div id="dots"></div>
         </div>
+        
         <div id="options" class="options-grid"></div>
     </div>
 
