@@ -9,19 +9,23 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div class="hero-header">
-            <h1 class="main-title">Kelime Lab</h1>
-            <div class="version-badge">1.1A</div>
+        <div class="header-wrapper">
+            <h1 class="main-title">
+                <span class="gradient-text">Kelime Lab</span>
+            </h1>
+
+            <div class="version-badge">
+                1.1A
+            </div>
         </div>
         
-        <div class="button-group">
-            <button id="start-button" onclick="resetAndStart()" class="primary-btn btn-blue">
-                BAŞLA
-            </button>
-            <button id="resume-button" onclick="startGame()" class="primary-btn btn-blue" style="display: none;">
-                DEVAM ET
-            </button>
-        </div>
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn btn-start">
+            BAŞLA
+        </button>
+        
+        <button id="resume-button" onclick="startGame()" class="primary-btn btn-start" style="display: none; margin-top: 20px;">
+            DEVAM ET
+        </button>
     </div>
 
     <div id="game-container">
