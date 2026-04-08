@@ -1,96 +1,42 @@
-:root {
-    --primary: #2c3e50;
-    --accent: #4CAF50;
-    --bg: #f8f9fa;
-    --text: #333;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelime Lab - Aprende Turco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+    <div id="start-screen" class="screen-content">
+        <h1 class="main-title">Kelime <span>Lab</span></h1>
+        
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 60px;">
+            BAŞLA
+        </button>
+        
+        <button id="resume-button" onclick="startGame()" class="primary-btn" style="margin-top: 20px; display: none;">
+            DEVAM ET
+        </button>
+    </div>
 
-/* --- ESTRUCTURA DE PORTADA --- */
-.header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+    <div id="game-container">
+        <div class="topbar">
+            <div class="stats">
+                <span id="score">0 tamamlanan</span>
+                <span id="percent">%0</span>
+            </div>
+            <button class="stats" onclick="location.reload()">Menü</button>
+        </div>
 
-.main-title {
-    display: inline-block;
-    margin: 0 !important;
-    line-height: 1.1;
-    font-size: 4rem;
-    font-weight: 800;
-    /* FORZAMOS EL ROJO ORIGINAL */
-    background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: #ff4b2b !important; /* Fallback si falla el degradado */
-}
+        <div class="card">
+            <h1 id="word">Cargando...</h1>
+            <div id="dots"></div>
+        </div>
 
-.version-badge {
-    background: linear-gradient(180deg, #ff0000 0%, #990000 100%) !important;
-    color: white !important;
-    font-weight: 900;
-    border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
-    margin-left: 25px;
-    font-size: 2rem;
-    flex-shrink: 0;
-}
+        <div id="options" class="options-grid"></div>
+    </div>
 
-.btn-start {
-    margin-top: 50px;
-    background-color: #1a237e !important;
-    color: #ffffff !important;
-}
-
-/* --- CAMBIOS PARA MÓVIL (PANTALLA PEQUEÑA) --- */
-@media (max-width: 600px) {
-    .header-wrapper {
-        flex-direction: column !important; /* El círculo baja */
-    }
-
-    .main-title {
-        font-size: 2.8rem !important; /* Tamaño para que no se corte */
-        white-space: nowrap;
-    }
-
-    .version-badge {
-        margin-left: 0 !important;
-        margin-top: 30px !important; /* SEPARACIÓN DE 30PX */
-        width: 65px !important;
-        height: 65px !important;
-        font-size: 1.2rem !important;
-    }
-}
-
-/* --- ESTILOS COMUNES DEL JUEGO --- */
-.screen-content { text-align: center; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-.primary-btn { display: block; width: 240px; font-size: 1.2rem; font-weight: bold; padding: 15px 0; border: none; border-radius: 50px; cursor: pointer; }
-#game-container { width: 100%; max-width: 500px; display: none; flex-direction: column; padding: 20px; }
-.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.stats { background: white; padding: 10px 20px; border-radius: 20px; font-weight: bold; border: none; }
-.card { background: white; padding: 40px 20px; border-radius: 24px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
-#word { font-size: 2.5rem; color: var(--primary); font-weight: 800; margin-bottom: 20px; }
-#dots { display: flex; justify-content: center; gap: 8px; }
-.dot { width: 12px; height: 12px; background: #e0e0e0; border-radius: 50%; }
-.dot.active { background-color: var(--accent); }
-.options-grid { display: grid; gap: 12px; }
-.option { background: white; padding: 18px; border-radius: 15px; font-size: 1.1rem; border: 2px solid transparent; }
-.correct { background-color: var(--accent) !important; color: white !important; }
-.wrong { background-color: #ff5252 !important; color: white !important; }
+    <script src="script.js"></script>
+</body>
+</html>
