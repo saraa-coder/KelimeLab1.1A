@@ -2,52 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelime Lab - Aprende Turco</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* --- ESTILO PARA PC --- */
+        /* --- ESTILO PARA PC (Escritorio) --- */
         .main-title span {
-            font-size: 65px; 
+            font-family: sans-serif;
+            font-size: 55px; /* Tamaño elegante para PC */
+            font-weight: 700; /* Grosor normal/negrita, no exagerado */
             background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-weight: 900;
-            font-family: sans-serif;
             white-space: nowrap;
         }
 
-        /* --- ESTILO PARA MÓVIL (Ancho Total) --- */
+        /* --- ESTILO PARA MÓVIL (Pantallas pequeñas) --- */
         @media screen and (max-width: 768px) {
+            /* Forzamos que el contenedor use todo el ancho */
+            #start-screen .main-container {
+                flex-direction: column !important;
+                width: 100% !important;
+            }
+
             .main-title {
                 width: 100% !important;
                 text-align: center !important;
+                margin: 0 !important;
             }
 
             .main-title span {
-                /* 18vw asegura que se estire según el ancho de la pantalla */
-                font-size: 18vw !important; 
+                /* 16vw hace que ocupe casi todo el ancho del móvil */
+                font-size: 16vw !important; 
+                font-weight: 800 !important; /* Un poco más grueso en móvil para que destaque */
                 display: block !important;
-                width: 100vw !important;
-                margin-left: calc(-50vw + 50%); /* Truco para centrar y expandir al borde real */
-                text-align: center;
                 line-height: 1;
             }
 
-            /* Contenedor para que el 1.1A no moleste */
-            #start-screen div[style*="display: flex"] {
-                flex-direction: column !important;
-                align-items: center !important;
-                width: 100%;
-            }
-
-            #start-screen div[style*="background: linear-gradient"] {
+            /* El círculo 1.1A debajo y centrado */
+            .version-circle {
                 margin-left: 0 !important;
                 margin-top: 15px !important;
-                width: 65px !important;
-                height: 65px !important;
+                width: 60px !important;
+                height: 60px !important;
+                font-size: 1.2rem !important;
             }
         }
     </style>
@@ -55,13 +55,13 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <div class="main-container" style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             
-            <h1 class="main-title" style="margin: 0; padding: 0;">
+            <h1 class="main-title" style="margin: 0; line-height: 1;">
                 <span>Kelime Lab</span>
             </h1>
 
-            <div style="
+            <div class="version-circle" style="
                 background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
                 color: white;
                 font-family: inherit;
@@ -76,12 +76,13 @@
                 box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
                 flex-shrink: 0;
                 margin-left: 25px;
+                line-height: 1;
             ">
                 1.1A
             </div>
         </div>
         
-        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 40px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
             BAŞLA
         </button>
         
