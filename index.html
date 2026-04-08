@@ -26,6 +26,7 @@
             }
 
             .main-title span {
+                /* MANTENIDO: Degradado rosa pastel a rojo intenso solicitado */
                 background: linear-gradient(180deg, #ffcdd2 5%, #b71c1c 85%) !important;
                 -webkit-background-clip: text !important;
                 background-clip: text !important;
@@ -41,17 +42,20 @@
                 margin-right: -0.15em !important; 
             }
 
+            /* Círculo centrado debajo en móvil */
             #start-screen div[style*="display: flex"] {
                 flex-direction: column !important;
                 align-items: center !important; 
             }
 
             #start-screen div[style*="background: linear-gradient"] {
+                /* Círculo aclarado también aplicado en la lógica de móvil */
+                background: linear-gradient(180deg, #ff5252 0%, #d32f2f 100%) !important;
                 width: 55px !important;
                 height: 55px !important;
-                font-size: 1.4rem !important;
+                font-size: 1.1rem !important;
                 margin-left: 0 !important; 
-                margin-top: 5px !important; 
+                margin-top: 8px !important; 
                 font-weight: 900 !important;
             }
 
@@ -71,7 +75,7 @@
             </h1>
 
             <div style="
-                background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
+                background: linear-gradient(180deg, #ff5252 0%, #d32f2f 100%);
                 color: white;
                 font-family: inherit;
                 font-size: 2rem;
@@ -82,7 +86,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+                box-shadow: 0 4px 12px rgba(211, 47, 47, 0.25);
                 flex-shrink: 0;
                 margin-left: 25px;
                 line-height: 1;
@@ -91,11 +95,11 @@
             </div>
         </div>
         
-        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #5c6bc0; color: #ffffff; border: none; cursor: pointer;">
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #3949ab; color: #ffffff; border: none; cursor: pointer;">
             BAŞLA
         </button>
         
-        <button id="resume-button" onclick="startGame()" class="primary-btn" style="margin-top: 20px; display: none; background-color: #5c6bc0; color: #ffffff; border: none; cursor: pointer;">
+        <button id="resume-button" onclick="startGame()" class="primary-btn" style="margin-top: 20px; display: none; background-color: #3949ab; color: #ffffff; border: none; cursor: pointer;">
             DEVAM ET
         </button>
     </div>
