@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
+        /* Ajuste específico para PC: Letras un punto menos gruesas */
+        .main-title span {
+            font-weight: 600 !important; 
+        }
+
         /* Ajustes específicos para móviles */
         @media screen and (max-width: 768px) {
             body, button, .primary-btn, #word, .stats {
@@ -21,22 +26,22 @@
             }
 
             .main-title span {
-                font-weight: 900 !important;
-                font-size: 16vw !important; /* Tamaño gigante basado en el ancho de pantalla */
+                font-weight: 900 !important; /* En móvil sí mantenemos el grosor para legibilidad */
+                font-size: 16vw !important; 
                 display: block !important;
                 white-space: nowrap !important;
             }
 
             /* --- AJUSTE DEL CÍRCULO EN MÓVIL --- */
             #start-screen div[style*="display: flex"] {
-                flex-direction: column !important; /* Pone el círculo debajo para que no robe ancho al texto */
+                flex-direction: column !important; 
             }
 
             #start-screen div[style*="background: linear-gradient"] {
                 width: 55px !important;
                 height: 55px !important;
                 font-size: 1.4rem !important;
-                margin-left: 0 !important; /* Centrado debajo */
+                margin-left: 0 !important; 
                 margin-top: 10px !important;
                 font-weight: 900 !important;
             }
