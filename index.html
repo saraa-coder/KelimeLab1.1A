@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Ajustes específicos para móviles */
+        /* --- ESTILOS PARA MÓVIL (Pantallas menores a 768px) --- */
         @media screen and (max-width: 768px) {
             body, button, .primary-btn, #word, .stats {
                 font-weight: 700 !important;
             }
 
-            /* --- SOLUCIÓN PARA EL TÍTULO EN MÓVIL --- */
+            /* Forzamos el tamaño del título solo en móviles */
             .main-title span {
                 font-weight: 900 !important;
-                font-size: 2.8rem !important; /* Ajusta este valor (2.8rem) a tu gusto */
-                display: block; /* Ayuda a que se posicione mejor en pantallas pequeñas */
+                font-size: 45px !important; /* Tamaño grande para móvil */
+                display: inline-block;
             }
 
-            /* --- AJUSTE DEL CÍRCULO EN MÓVIL --- */
+            /* Ajuste del círculo en móvil */
             #start-screen div[style*="background: linear-gradient"] {
-                width: 60px !important;   
-                height: 60px !important;  
-                font-size: 1.4rem !important; 
-                margin-left: 15px !important; 
+                width: 55px !important;
+                height: 55px !important;
+                font-size: 1.2rem !important;
+                margin-left: 10px !important;
                 font-weight: 900 !important;
             }
 
@@ -38,10 +38,10 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             
             <h1 class="main-title" style="display: inline-block; margin: 0; line-height: 1;">
-                <span style="font-size: 3rem; background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-family: sans-serif;">Kelime Lab</span>
+                <span style="background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 60px;">Kelime Lab</span>
             </h1>
 
             <div style="
