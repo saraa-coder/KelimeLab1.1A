@@ -7,47 +7,42 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* --- ESTILO PARA PC (Escritorio) --- */
-        .main-title span {
-            font-family: sans-serif;
-            font-size: 55px; /* Tamaño elegante para PC */
-            font-weight: 700; /* Grosor normal/negrita, no exagerado */
-            background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            white-space: nowrap;
-        }
-
-        /* --- ESTILO PARA MÓVIL (Pantallas pequeñas) --- */
+        /* Ajustes específicos para móviles */
         @media screen and (max-width: 768px) {
-            /* Forzamos que el contenedor use todo el ancho */
-            #start-screen .main-container {
-                flex-direction: column !important;
-                width: 100% !important;
+            body, button, .primary-btn, #word, .stats {
+                font-weight: 700 !important;
             }
 
+            /* --- ESTO HACE QUE OCUPE TODO EL ANCHO EN MÓVIL --- */
             .main-title {
+                display: block !important;
                 width: 100% !important;
                 text-align: center !important;
-                margin: 0 !important;
             }
 
             .main-title span {
-                /* 16vw hace que ocupe casi todo el ancho del móvil */
-                font-size: 16vw !important; 
-                font-weight: 800 !important; /* Un poco más grueso en móvil para que destaque */
+                font-weight: 900 !important;
+                font-size: 16vw !important; /* Tamaño gigante basado en el ancho de pantalla */
                 display: block !important;
-                line-height: 1;
+                white-space: nowrap !important;
             }
 
-            /* El círculo 1.1A debajo y centrado */
-            .version-circle {
-                margin-left: 0 !important;
-                margin-top: 15px !important;
-                width: 60px !important;
-                height: 60px !important;
-                font-size: 1.2rem !important;
+            /* --- AJUSTE DEL CÍRCULO EN MÓVIL --- */
+            #start-screen div[style*="display: flex"] {
+                flex-direction: column !important; /* Pone el círculo debajo para que no robe ancho al texto */
+            }
+
+            #start-screen div[style*="background: linear-gradient"] {
+                width: 55px !important;
+                height: 55px !important;
+                font-size: 1.4rem !important;
+                margin-left: 0 !important; /* Centrado debajo */
+                margin-top: 10px !important;
+                font-weight: 900 !important;
+            }
+
+            .options-grid button {
+                font-weight: 800 !important;
             }
         }
     </style>
@@ -55,13 +50,13 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div class="main-container" style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             
-            <h1 class="main-title" style="margin: 0; line-height: 1;">
-                <span>Kelime Lab</span>
+            <h1 class="main-title" style="display: inline-block; margin: 0; line-height: 1;">
+                <span style="background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Kelime Lab</span>
             </h1>
 
-            <div class="version-circle" style="
+            <div style="
                 background: linear-gradient(180deg, #ff0000 0%, #990000 100%);
                 color: white;
                 font-family: inherit;
