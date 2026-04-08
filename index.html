@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Ajuste específico para PC: Casi 700 pero con un toque menos de peso */
+        /* Ajuste específico para PC: Grosor casi 700 pero con un toque menos de peso */
         .main-title span {
             font-weight: 695 !important; 
         }
@@ -27,19 +27,20 @@
             }
 
             .main-title span {
+                /* GROSOR AUMENTADO EN MÓVIL */
                 font-weight: 900 !important; 
-                /* AJUSTES SOLICITADOS: */
-                font-size: 14vw !important; /* Un punto más pequeño (antes 16vw) */
-                letter-spacing: -0.03em !important; /* Letras más juntas/centradas entre sí */
-                display: inline-block !important; /* Mejor para el centrado de texto */
+                font-size: 14vw !important; 
+                letter-spacing: -0.04em !important; /* Un pelín más juntas para compensar el grosor */
+                display: inline-block !important;
                 line-height: 1.1 !important;
                 white-space: nowrap !important;
+                -webkit-text-stroke: 1px transparent; /* Truco para suavizar bordes en grosores altos */
             }
 
             /* Centrado del círculo y reducción de espacio */
             #start-screen div[style*="display: flex"] {
                 flex-direction: column !important;
-                align-items: center !important; /* Centrado total */
+                align-items: center !important; 
             }
 
             #start-screen div[style*="background: linear-gradient"] {
@@ -47,7 +48,7 @@
                 height: 55px !important;
                 font-size: 1.4rem !important;
                 margin-left: 0 !important; 
-                margin-top: 5px !important; /* Menos separación con las letras */
+                margin-top: 5px !important; 
                 font-weight: 900 !important;
             }
 
