@@ -13,16 +13,20 @@
                 font-weight: 700 !important;
             }
 
+            /* --- CAMBIO: KELIME LAB MÁS GRUESO --- */
             .main-title span {
                 font-weight: 900 !important;
+                /* El shadow añade grosor extra visual en móviles */
+                text-shadow: 0.5px 0px 0px currentColor, -0.5px 0px 0px currentColor;
+                letter-spacing: -0.5px; /* Ajuste para que el grosor no pegue las letras */
             }
 
-            /* --- AJUSTE DEL CÍRCULO EN MÓVIL --- */
+            /* Círculo 1.1A ajustado */
             #start-screen div[style*="background: linear-gradient"] {
-                width: 55px !important;   /* Antes 75px */
-                height: 55px !important;  /* Antes 75px */
-                font-size: 1.4rem !important; /* Texto un poco más acorde al círculo */
-                margin-left: 15px !important; /* Menos separación para que quepa bien */
+                width: 55px !important;
+                height: 55px !important;
+                font-size: 1.4rem !important;
+                margin-left: 15px !important;
                 font-weight: 900 !important;
             }
 
