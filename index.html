@@ -9,26 +9,25 @@
     <style>
         /* Ajustes específicos para móviles */
         @media screen and (max-width: 768px) {
-            /* Engrosamos el texto general y botones */
             body, button, .primary-btn, #word, .stats {
                 font-weight: 700 !important;
             }
 
-            /* El título principal "Kelime Lab" con un poco más de peso */
             .main-title span {
                 font-weight: 900 !important;
-                -webkit-text-stroke: 0.5px rgba(0,0,0,0.1); /* Sutil contorno para resaltar */
             }
 
-            /* Las opciones de respuesta en el grid suelen verse delgadas, aquí las reforzamos */
+            /* --- AJUSTE DEL CÍRCULO EN MÓVIL --- */
+            #start-screen div[style*="background: linear-gradient"] {
+                width: 55px !important;   /* Antes 75px */
+                height: 55px !important;  /* Antes 75px */
+                font-size: 1.4rem !important; /* Texto un poco más acorde al círculo */
+                margin-left: 15px !important; /* Menos separación para que quepa bien */
+                font-weight: 900 !important;
+            }
+
             .options-grid button {
                 font-weight: 800 !important;
-                font-size: 1.1rem; /* Un pelín más grandes para legibilidad */
-            }
-
-            /* Los números de la versión (1.1A) ya son gruesos, pero aseguramos claridad */
-            #start-screen div[style*="background: linear-gradient"] {
-                font-weight: 900 !important;
             }
         }
     </style>
