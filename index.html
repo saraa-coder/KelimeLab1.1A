@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Ajuste ultra fino para PC: Casi 700 pero con un toque menos de peso */
+        /* Ajuste específico para PC: Casi 700 pero con un toque menos de peso */
         .main-title span {
             font-weight: 695 !important; 
         }
@@ -18,23 +18,28 @@
                 font-weight: 700 !important;
             }
 
-            /* Ocupar todo el ancho en móvil */
+            /* Contenedor del título en móvil */
             .main-title {
                 display: block !important;
                 width: 100% !important;
                 text-align: center !important;
+                margin: 0 !important;
             }
 
             .main-title span {
                 font-weight: 900 !important; 
-                font-size: 16vw !important; 
-                display: block !important;
+                /* AJUSTES SOLICITADOS: */
+                font-size: 14vw !important; /* Un punto más pequeño (antes 16vw) */
+                letter-spacing: -0.03em !important; /* Letras más juntas/centradas entre sí */
+                display: inline-block !important; /* Mejor para el centrado de texto */
+                line-height: 1.1 !important;
                 white-space: nowrap !important;
             }
 
-            /* Ajuste del círculo en móvil */
+            /* Centrado del círculo y reducción de espacio */
             #start-screen div[style*="display: flex"] {
-                flex-direction: column !important; 
+                flex-direction: column !important;
+                align-items: center !important; /* Centrado total */
             }
 
             #start-screen div[style*="background: linear-gradient"] {
@@ -42,7 +47,7 @@
                 height: 55px !important;
                 font-size: 1.4rem !important;
                 margin-left: 0 !important; 
-                margin-top: 10px !important;
+                margin-top: 5px !important; /* Menos separación con las letras */
                 font-weight: 900 !important;
             }
 
