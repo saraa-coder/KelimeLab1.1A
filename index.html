@@ -2,41 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kelime Lab - Aprende Turco</title>
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* --- ESTILO PARA PC (Escritorio) --- */
+        /* --- ESTILO PARA PC --- */
         .main-title span {
-            font-size: 65px; /* Tamaño grande en PC */
+            font-size: 65px; 
             background: linear-gradient(180deg, #ff4b2b 20%, #8b0000 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 900;
             font-family: sans-serif;
+            white-space: nowrap;
         }
 
-        /* --- ESTILO PARA MÓVIL --- */
+        /* --- ESTILO PARA MÓVIL (Ancho Total) --- */
         @media screen and (max-width: 768px) {
-            .main-title span {
-                /* 12vw significa que el tamaño depende del ancho de la pantalla del móvil */
-                font-size: 12vw !important; 
-                display: block !important;
-                text-align: center;
+            .main-title {
+                width: 100% !important;
+                text-align: center !important;
             }
 
-            /* Ajustamos el contenedor para que el círculo no empuje al texto */
+            .main-title span {
+                /* 18vw asegura que se estire según el ancho de la pantalla */
+                font-size: 18vw !important; 
+                display: block !important;
+                width: 100vw !important;
+                margin-left: calc(-50vw + 50%); /* Truco para centrar y expandir al borde real */
+                text-align: center;
+                line-height: 1;
+            }
+
+            /* Contenedor para que el 1.1A no moleste */
             #start-screen div[style*="display: flex"] {
-                flex-direction: column !important; /* En móvil: Título arriba, Círculo abajo */
-                gap: 10px;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100%;
             }
 
             #start-screen div[style*="background: linear-gradient"] {
-                margin-left: 0 !important; /* Quitamos el margen lateral en móvil */
-                width: 70px !important;
-                height: 70px !important;
+                margin-left: 0 !important;
+                margin-top: 15px !important;
+                width: 65px !important;
+                height: 65px !important;
             }
         }
     </style>
@@ -46,7 +57,7 @@
     <div id="start-screen" class="screen-content">
         <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             
-            <h1 class="main-title" style="margin: 0; line-height: 1.1;">
+            <h1 class="main-title" style="margin: 0; padding: 0;">
                 <span>Kelime Lab</span>
             </h1>
 
@@ -70,7 +81,7 @@
             </div>
         </div>
         
-        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 50px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
+        <button id="start-button" onclick="resetAndStart()" class="primary-btn" style="margin-top: 40px; background-color: #1a237e; color: #ffffff; border: none; cursor: pointer;">
             BAŞLA
         </button>
         
