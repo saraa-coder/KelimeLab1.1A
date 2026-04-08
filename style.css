@@ -31,28 +31,26 @@ body {
 }
 
 .main-title {
-    /* Forzamos que no rompa la línea */
     white-space: nowrap; 
-    font-family: system-ui, -apple-system, sans-serif;
-    /* Ajuste de tamaño para que quepa en una línea en casi cualquier móvil */
-    font-size: clamp(2.2rem, 9vw, 4rem);
-    font-weight: 900;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: clamp(2.2rem, 10vw, 4rem);
+    font-weight: 800;
     color: var(--primary);
     margin: 0;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     line-height: 1.2;
-    text-transform: uppercase;
+    /* Eliminado el uppercase para mantener Kelime Lab tal cual */
 }
 
 .main-title span {
     color: var(--pantone-blue);
 }
 
-/* Forzamos que el badge de versión aparezca justo debajo del título */
-.version-badge, 
-div[style*="border-radius: 50%"] { 
+/* Badge de versión debajo del título */
+div[style*="border-radius: 50%"],
+.version-badge { 
     position: static !important;
-    margin: 10px auto !important;
+    margin: 5px auto 15px auto !important;
     display: flex !important;
     flex-shrink: 0;
 }
@@ -71,7 +69,6 @@ div[style*="border-radius: 50%"] {
     transition: transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
     text-align: center;
-    margin-top: 10px;
 }
 
 .primary-btn:hover {
