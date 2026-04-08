@@ -9,24 +9,19 @@
 <body>
 
     <div id="start-screen" class="screen-content">
-        <div class="header-container">
-            
-            <h1 class="main-title">
-                Kelime Lab
-            </h1>
-
-            <div class="version-badge">
-                1.1A
-            </div>
+        <div class="hero-header">
+            <h1 class="main-title">Kelime Lab</h1>
+            <div class="version-badge">1.1A</div>
         </div>
         
-        <button id="start-button" onclick="resetAndStart()" class="primary-btn btn-blue">
-            BAŞLA
-        </button>
-        
-        <button id="resume-button" onclick="startGame()" class="primary-btn btn-blue" style="display: none;">
-            DEVAM ET
-        </button>
+        <div class="button-group">
+            <button id="start-button" onclick="resetAndStart()" class="primary-btn btn-blue">
+                BAŞLA
+            </button>
+            <button id="resume-button" onclick="startGame()" class="primary-btn btn-blue" style="display: none;">
+                DEVAM ET
+            </button>
+        </div>
     </div>
 
     <div id="game-container">
@@ -37,12 +32,10 @@
             </div>
             <button class="stats" onclick="location.reload()">Menü</button>
         </div>
-        
         <div class="card">
             <h1 id="word">Cargando...</h1>
             <div id="dots"></div>
         </div>
-        
         <div id="options" class="options-grid"></div>
     </div>
 
