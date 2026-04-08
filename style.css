@@ -33,7 +33,7 @@ body {
     font-size: clamp(2.2rem, 10vw, 4rem);
     font-weight: 800;
     color: var(--primary);
-    margin: 0;
+    margin: 0 !important;
     letter-spacing: -1.5px;
     line-height: 1.1;
 }
@@ -42,26 +42,35 @@ body {
     color: var(--pantone-blue);
 }
 
-/* FORZADO DEL CÍRCULO (Badge de versión) */
+/* EL ARREGLO DEFINITIVO PARA EL CÍRCULO */
 div[style*="border-radius: 50%"] { 
-    position: static !important;
+    /* Forzamos que baje a la siguiente línea */
+    position: relative !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    /* Tamaño del círculo (equilibrado) */
+    width: 60px !important; 
+    height: 60px !important;
+    min-width: 60px !important;
+    min-height: 60px !important;
     
-    /* Tamaño del círculo */
-    width: 65px !important; 
-    height: 65px !important;
-    
-    /* Texto dentro del círculo */
+    /* El texto de la versión (1.A1) */
     font-size: 1.2rem !important; 
     font-weight: 800 !important;
+    color: white !important;
     
-    /* Separación: 30px del título arriba y 30px del botón abajo */
-    margin: 30px auto !important; 
+    /* SEPARACIÓN CRUCIAL */
+    margin-top: 30px !important; 
+    margin-bottom: 30px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     
     flex-shrink: 0 !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .primary-btn {
