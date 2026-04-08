@@ -24,22 +24,31 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Espaciado uniforme entre elementos */
 }
 
 .main-title {
-    /* Tamaño fluido: mínimo 2.5rem, ideal 8vw, máximo 4rem */
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    font-weight: 800;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    font-weight: 900;
     color: var(--primary);
     margin: 0;
-    /* Reducido el espaciado negativo para evitar que las letras se monten en móvil */
     letter-spacing: -1px;
-    line-height: 1.1;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
 .main-title span {
     color: var(--pantone-blue);
+}
+
+/* Ajuste para que el badge de versión salga DEBAJO */
+.version-badge {
+    position: static !important; /* Quitamos el absoluto para que baje */
+    margin: 10px 0 20px 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .primary-btn {
@@ -107,7 +116,6 @@ body {
     font-weight: 800;
 }
 
-/* EFECTO PALABRA COMPLETADA */
 #word.word-mastered {
     color: var(--accent) !important;
     transform: none !important;
@@ -162,8 +170,6 @@ body {
     background-color: #ff5252 !important; 
     color: white !important; 
 }
-
-/* --- NUEVO: EFECTO FOCUS AL COMPLETAR 5 ESTRELLAS --- */
 
 .options-grid.has-mastered .option {
     opacity: 0.3;
